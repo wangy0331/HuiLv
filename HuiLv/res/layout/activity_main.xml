@@ -8,9 +8,125 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.wy.huilv.MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/huobi"
+        android:src="@drawable/ic_launcher" />
 
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image"
+        android:orientation="vertical" 
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/huobi"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/msg1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/huobi" />
+
+        <TextView
+            android:id="@+id/msg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/huobi" />
+    </LinearLayout>
+    
+
+        
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" 
+        android:layout_below="@id/title"
+        >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:ems="10"
+            android:inputType="numberDecimal" 
+            android:background="@drawable/shape2"
+            android:layout_marginTop="5dp"
+            >
+            
+        </EditText>
+
+        <!-- 
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp" 
+            android:layout_marginTop="2.5dp"
+            />
+		-->
+		<Button
+            android:id="@+id/sprnner1"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape2"
+            style="@style/btn"
+            />
+        <Button
+            android:id="@+id/zhuan"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/zhuan"
+            android:layout_weight="1"
+            
+            />
+        
+        <Button
+            android:id="@+id/spinner2"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape2"
+            style="@style/btn"
+            />
+        <!-- 
+         <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:layout_weight="1" 
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2.5dp"
+            />
+		-->
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/btn"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape"
+            style="@style/btn"
+            />
+    </LinearLayout>
 </RelativeLayout>
