@@ -27,7 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/huobi"
-            android:textSize="10sp" />
+            android:textSize="10sp" 
+            />
 
         <TextView
             android:id="@+id/msg1"
@@ -47,86 +48,57 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal" 
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
         android:layout_below="@id/title"
         >
+		<Button
+            android:id="@+id/sprnner1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@drawable/shape2"
+            style="@style/btn"
+            android:text="@string/btnA"
+            />
+       
+        <Button
+            android:id="@+id/spinner2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5sp"
+            android:background="@drawable/shape2"
+            style="@style/btn"
+            android:text="@string/btnB"
+            />
 
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginTop="5sp"
+            android:background="@drawable/shape2"
             android:ems="10"
-            android:inputType="numberDecimal" 
-            android:background="@drawable/shape2"
-            android:layout_marginTop="5dp"
-            >
-            
+            android:gravity="left"
+            android:inputType="numberDecimal" >
         </EditText>
-
-        <!-- 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="70dp"
-            android:layout_height="28dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" 
-            android:layout_marginTop="2.5dp"
-            />
-		-->
-		<Button
-            android:id="@+id/sprnner1"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/shape2"
-            style="@style/btn"
-            />
-        <Button
-            android:id="@+id/zhuan"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/zhuan"
-            android:layout_weight="1"
-            
-            />
-        
-        <Button
-            android:id="@+id/spinner2"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/shape2"
-            style="@style/btn"
-            />
-        <!-- 
-         <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="70dp"
-            android:layout_height="28dp"
-            android:layout_weight="1" 
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="2.5dp"
-            />
-		-->
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="@string/btn"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/shape"
-            style="@style/btn"
-            />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/buttonList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp"
+        >
+         <Button
+          android:id="@+id/zhuan"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:background="@drawable/zhuan"
+          
+          />
     </LinearLayout>
 </RelativeLayout>

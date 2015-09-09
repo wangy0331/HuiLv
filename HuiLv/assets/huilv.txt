@@ -1,0 +1,25 @@
+{
+    errNum: 0,
+    errMsg: "success",
+    retData: [
+    	{name:"人民币",code:"CNY"},
+        {name:"澳大利亚元",code:"AUD"},
+        {name:"加拿大元",code:"CAD"},
+        {name:"瑞士法郎",code:"CHF"},
+        {name:"丹麦克朗",code:"DKK"},
+        {name:"欧元",code:"EUR"},
+        {name:"英镑",code:"GBP"},
+        {name:"港币",code:"HKD"},
+        {name:"日元",code:"JPY"},
+        {name:"韩元",code:"KRW"},
+        {name:"澳门元",code:"MOP"},
+        {name:"挪威克朗",code:"NOK"},
+        {name:"新西兰元",code:"NZD"},
+        {name:"菲律宾比索",code:"PHP"},
+        {name:"卢布",code:"RUB"},
+        {name:"瑞典克朗",code:"SEK"},
+        {name:"新加坡元",code:"SGD"},
+        {name:"泰铢",code:"THB"},
+        {name:"美元",code:"USD"}
+    ]
+}
