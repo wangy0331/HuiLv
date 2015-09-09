@@ -1,5 +1,8 @@
 package com.wy.huilv.tools;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +11,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.util.Log;
 
 import com.wy.huilv.bean.Money;
@@ -66,5 +70,26 @@ public class JsonParser {
 			Log.e("error", e.toString(), e);
 		}
 		return list;
+	}
+	
+	public static String parserCodeList(InputStream in) {
+		String jsonResult = null;
+		try {
+			BufferedReader reader = null;
+			StringBuffer sbf = new StringBuffer();
+			reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+			String strRead = null;
+			while ((strRead = reader.readLine()) != null) {
+				sbf.append(strRead);
+				sbf.append("\r\n");
+			}
+			reader.close();
+
+			jsonResult = sbf.toString();
+			return jsonResult;
+		} catch (Exception e) {
+			Log.e("error", e.toString(), e);
+		}
+		return jsonResult;
 	}
 }

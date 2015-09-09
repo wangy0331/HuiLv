@@ -116,23 +116,9 @@ public class MainActivity extends Activity {
 					@Override
 					public void run() {
 						try {
-							BufferedReader reader = null;
-							StringBuffer sbf = new StringBuffer();
-							InputStream is = getResources().getAssets().open("huilv.txt");
-							reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-							
-							String strRead = null;
-							while ((strRead = reader.readLine()) != null) {
-								sbf.append(strRead);
-								sbf.append("\r\n");
-							}
-							reader.close();
-	
-							String jsonResult = sbf.toString();
-	
-							Log.d("ddd", sbf.toString());
-	
-							moneyList = JsonParser.parserMoneyList(jsonResult);
+							InputStream in = getResources().getAssets().open("huilv.txt");
+							String result = JsonParser.parserCodeList(in);
+							moneyList = JsonParser.parserMoneyList(result);
 							switch (clickedView.getId()) {
 							case R.id.sprnner1: //A
 								myHandler.sendEmptyMessage(1);
