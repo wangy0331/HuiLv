@@ -1,4 +1,4 @@
-package com.wy.huilv;
+package com.wy.huilv.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,4 +1,4 @@
-package com.wy.huilv;
+package com.wy.huilv.bean;
 
 public class Money {
 

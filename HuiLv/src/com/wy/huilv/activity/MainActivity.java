@@ -1,4 +1,4 @@
-package com.wy.huilv;
+package com.wy.huilv.activity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +13,9 @@ import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import com.wy.huilv.R;
+import com.wy.huilv.bean.Money;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -56,15 +59,12 @@ public class MainActivity extends Activity {
 	private String httpUrl = "http://apis.baidu.com/apistore/currencyservice/type";
 	private String httpUrl_c = "http://apis.baidu.com/apistore/currencyservice/currency";
 	private String httpArg = "";
-	private Message msg = null;
 	private Map<String, String> map = null;
-	private Map<String, String> hmap = null;
 	private String[] abc = null;
 	private Double moneyHL = null;
-	private Double moneyOld = null;
 	String btnValA = null;
 	String btnValB = null;
-	String amount ="0";
+	String amount ="1";
 	boolean flag = true;
 	
 	@Override
@@ -480,9 +480,11 @@ public class MainActivity extends Activity {
 		            Log.d("TAG","onTextChanged--------------->");    
 		            String aaa = btnA.getText().toString();
 					String bbb = btnB.getText().toString();
-					if(!"".equals(et.getText().toString())){
+					Log.d("et1",et.getText().toString());
+					if(!"".equals(et.getText().toString()) && !".".equals(et.getText().toString())){
 						amount = et.getText().toString();
-					}
+					
+					Log.d("et", amount);
 					
 					if(moneyHL != null){
 						Log.d("HL",moneyHL.toString());
@@ -518,6 +520,12 @@ public class MainActivity extends Activity {
 							}
 						}).start();
 					}  
+					}else{
+						TextView tv = (TextView) findViewById(R.id.msg1);
+						TextView tv2 = (TextView) findViewById(R.id.msg2);
+						tv.setText("");
+						tv2.setText("");
+					}
 		        }                    
 		    };  
 }

@@ -1,4 +1,6 @@
-package com.wy.huilv;
+package com.wy.huilv.activity;
+
+import com.wy.huilv.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
